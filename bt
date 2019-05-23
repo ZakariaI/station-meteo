@@ -15,27 +15,26 @@ void setup() {
 }
 
 void loop() {
-/*
-if(mySerial.available()){
 
+
+if(mySerial.available()){
+  
+  i=0;
+  
   do{
     dataChar[i++]= mySerial.read();
     
    delay(3);
   }while(mySerial.available()>0);
 
-  mySerial.println(dataChar);
+  Serial.println("Données recus : ");
   Serial.println(dataChar);
+  mySerial.println("Donnees recus : ");
+  delay(1000);
+  mySerial.println(dataChar);
+  
 
-  for(i=0;i<sizeof(dataChar);i++){
-    dataChar[i]=0;
+  memset(dataChar, 0, 32);
   }
-  }*/
 
- mySerial.println("TT");
-
- delay(1000);
 }
-
-//while(mySerial.available())
-//Serial.print((char)mySerial.read());
